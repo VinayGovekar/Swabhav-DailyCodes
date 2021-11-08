@@ -1,0 +1,50 @@
+Class Code: (class provides the flexibility of combining data and methods (functions ) and it provides the re-usability called inheritance.)
+public class Author {
+  
+    // Data members of class
+    public string name;
+    public string language;
+    public int article_no;
+    public int improv_no;
+  
+    // Method of class
+    public void Details(string name, string language,
+                        int article_no, int improv_no)
+    {
+        this.name = name;
+        this.language = language;
+        this.article_no = article_no;
+        this.improv_no = improv_no;
+  
+        Console.WriteLine("The name of the author is :  " + name
+                          + "\nThe name of language is : " + language
+                          + "\nTotal number of article published  " 
+                          + article_no + "\nTotal number of Improvements:"
+                          +" done by author is : " + improv_no);
+    }
+  
+    // Main Method
+    public static void Main(String[] args)
+    {
+  
+        // Creating object
+        Author obj = new Author();
+  
+        // Calling method of class
+        // using class object
+        obj.Details("Ankita", "C#", 80, 50);
+    }
+}
+
+Structure Code:  (Struct should typically be used for grouping data)
+public struct Car
+{
+  
+    // Declaring different data types
+    public string Brand;
+    public string Model;
+    public string Color;
+}
+
+
+A class has all members private by default. A struct is a class where members are public by default.

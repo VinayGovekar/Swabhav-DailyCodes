@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotComGameApp", "DotComeGameApp\DotComGameApp.csproj", "{00A6123C-C785-473F-B3D7-02049ED90330}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00A6123C-C785-473F-B3D7-02049ED90330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00A6123C-C785-473F-B3D7-02049ED90330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00A6123C-C785-473F-B3D7-02049ED90330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00A6123C-C785-473F-B3D7-02049ED90330}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8AF098F-D490-4A68-BF8D-3B9E161FCAF1}
+	EndGlobalSection
+EndGlobal
