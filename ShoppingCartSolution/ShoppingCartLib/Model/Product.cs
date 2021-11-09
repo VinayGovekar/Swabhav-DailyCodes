@@ -32,6 +32,10 @@ namespace ShoppingCartLib.Model
             if (this.ID == matchProduct.ID && this.Name == matchProduct.Name) return true;
             return false;
         }
+        public double GetDiscountedPrice()
+        {
+            return _price - ((_price * _discount) / 100);
+        }
         public string Name { get { return _name; } }
         public double Price { get { return _price; } }
         public float Discount { get { return _discount; } }
