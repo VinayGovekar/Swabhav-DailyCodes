@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoorApp", "DogDoorApp\DogDoorApp.csproj", "{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DogDoorApp.Test", "DogDoorApp.Test\DogDoorApp.Test.csproj", "{1DB9BA6F-25D5-4D6A-8B8F-C31AAA3B1E27}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DB9BA6F-25D5-4D6A-8B8F-C31AAA3B1E27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DB9BA6F-25D5-4D6A-8B8F-C31AAA3B1E27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DB9BA6F-25D5-4D6A-8B8F-C31AAA3B1E27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DB9BA6F-25D5-4D6A-8B8F-C31AAA3B1E27}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C919C68-E83A-4609-8BD7-965F5EEB9AFD}
+	EndGlobalSection
+EndGlobal
