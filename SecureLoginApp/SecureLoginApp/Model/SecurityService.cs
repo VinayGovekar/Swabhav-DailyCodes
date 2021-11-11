@@ -7,14 +7,14 @@ namespace SecureLoginApp.Model
         private Dictionary<string, User> users = new Dictionary<string, User>();
         public SecurityService()
         {
-            users.Add("vg101", new User("vg101", "Vinay", "Govekar", "vg@gmail.com", "vg@101"));
-            users.Add("nd102",new User("nd102","Nelson","Dsouza","nd@gmail.com","nd@102"));
-            users.Add("nk103",new User("nk103","Neeraj","Kasar","nk@gmail.com","nk@103"));
-            users.Add("ak104",new User("ak104","Advait","Kunte","ak@gmail.com","ak@104"));
-            users.Add("rs105",new User("rs105","Rajkumar","Singh","rs@gmail.com","rs@105"));
+            users.Add("vg101", new User("vg101","vg@101",new UserView("vg@gmail.com","Vinay","Govekar")));
+            users.Add("nd102", new User("nd102", "nd@102", new UserView("nd@gmail.com", "Nelson", "Dsouza")));
+            users.Add("nk103", new User("nk103", "nk@103", new UserView("nk@gmail.com", "Neeraj", "Kasar")));
+            users.Add("ak104", new User("ak104", "ak@104", new UserView("ak@gmail.com", "Advait", "Kunte")));
+            users.Add("rs105", new User("rs105", "rs@105", new UserView("rs@gmail.com", "Raj", "Singh")));
         }
 
-        public User Login(string id,string password)
+        public UserView Login(string id,string password)
         {
             foreach (var user in users)
             {
@@ -24,10 +24,10 @@ namespace SecureLoginApp.Model
             throw new InvalidUserException();
         }
 
-        private User CheckUser(User user, string id, string password)
+        private UserView CheckUser(User user, string id, string password)
         {
             if (user.ID == id && user.Password == password)
-                return user;
+                return user.UserDetails;
             return null;
         }
     }

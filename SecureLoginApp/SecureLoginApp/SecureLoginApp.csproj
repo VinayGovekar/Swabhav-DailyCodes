@@ -46,6 +46,7 @@
     <Compile Include="Model\InvalidUserException.cs" />
     <Compile Include="Model\SecurityService.cs" />
     <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserView.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

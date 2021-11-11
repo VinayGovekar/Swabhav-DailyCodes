@@ -9,7 +9,7 @@ namespace SecureLoginApp
             try
             {
                 SecurityService service = new SecurityService();
-                PrintDetails(service.Login("vg101231", "vg@10011"));
+                PrintDetails(service.Login("vg101", "vg@101"));
             }
             catch (InvalidUserException ex)
             {
@@ -19,9 +19,9 @@ namespace SecureLoginApp
             Console.ReadLine();
 
         }
-        public static void PrintDetails(User user)
+        public static void PrintDetails(UserView user)
         {
-            Console.WriteLine("Name: {0} {1}\nID: {2}\nEmail: {3}",user.FirstName,user.LastName,user.ID,user.Email);
+            Console.WriteLine("Name: {0}\nEmail: {1}",user.FirstName+user.LastName,user.Email);
         }
     }
 }
