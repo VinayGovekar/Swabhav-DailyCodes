@@ -8,6 +8,8 @@ namespace SRPSolutionApp
         {
             var invoicePrinter = new InvoiceConsolePrinter();
             invoicePrinter.PrintInvoice(new Invoice(101, "Company Invoice", 100000, 10f, 5f));
+            var invoiceHtmlGenerator = new InvoiceHtmlGenerator();
+            invoiceHtmlGenerator.GenerateHTML(new Invoice(101, "Company Invoice", 100000, 10f, 5f));
             Console.ReadKey();
         }
     }

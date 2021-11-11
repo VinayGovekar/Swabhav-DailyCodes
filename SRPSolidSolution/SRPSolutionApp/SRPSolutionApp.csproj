@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoiceConsolePrinter.cs" />
+    <Compile Include="InvoiceHtmlGenerator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
