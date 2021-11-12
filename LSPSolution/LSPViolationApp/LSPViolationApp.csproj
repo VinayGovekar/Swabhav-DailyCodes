@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{18645DE7-05CC-467F-9CDB-A8B344C6CAAE}</ProjectGuid>
+    <ProjectGuid>{C5F27826-89BC-499C-8BD0-1CAE35CFB5A8}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DogDoorApp</RootNamespace>
-    <AssemblyName>DogDoorApp</AssemblyName>
+    <RootNamespace>LSPViolationApp</RootNamespace>
+    <AssemblyName>LSPViolationApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DogDoorSimulator.cs" />
-    <Compile Include="Model\DogDoor.cs" />
-    <Compile Include="Model\Remote.cs" />
+    <Compile Include="Model\Rectangle.cs" />
+    <Compile Include="Model\Square.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

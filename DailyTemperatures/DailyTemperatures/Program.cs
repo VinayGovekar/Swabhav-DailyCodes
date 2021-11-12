@@ -11,31 +11,21 @@ namespace DailyTemperatures
         static void Main(string[] args)
         {
             int[] temp = { 73, 74, 75, 71, 69, 72, 76, 73 };
-            Console.WriteLine(DailyTemperatures(temp));
+            foreach (var tem in DailyTemperatures(temp)) Console.WriteLine(tem);
             Console.ReadKey();
         }
         public static int[] DailyTemperatures(int[] temperatures)
         {
             List<int> result = new List<int>();
-            for (int i = 0; i < temperatures.Length; i++)
+            for(int i = 0; i < temperatures.Length; i++)
             {
                 int count = 0;
-                int j = i + 1;
-                if (j < temperatures.Length && temperatures[i] < temperatures[j] )
+                int j = i;
+                while(j<temperatures.Length && temperatures[i] >= temperatures[j])
                 {
-                    count = 1;
-                }
-                else
-                {
-                    while (j < temperatures.Length)
-                    {
-                        j++;
-                        if (j < temperatures.Length && temperatures[i] < temperatures[j]) {
-                            count++;
-                            break;
-                        }
-                        count++;
-                    }
+                    count++;
+                    if (j == temperatures.Length - 1) count = 0;
+                    j++;
                 }
                 result.Add(count);
             }
