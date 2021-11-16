@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    This inner function, because it enclosed relevant variables from the outer function
+into its bubble (aka scope), is known as a closure
+it is a newly created function that also
+contains its variable context 
+</body>
+<script>
+    function stopWatch() {
+        var startTime = Date.now();
+        function getDelay() {
+        var elapsedTime = Date.now() - startTime;
+        alert(elapsedTime);
+    }
+    return getDelay;
+    }
+    var timer = stopWatch();
+    for (var i = 0; i < 1000000; i++) {
+        var foo = Math.random() * 10000;
+    }
+    timer();
+</script>
+</html>

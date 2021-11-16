@@ -5,6 +5,7 @@ namespace SingletonDesignPattern
 {
     public class Dataservice
     {
+        private static object contextLock = new object();
         private static Dataservice bucket;
         private Dataservice()
         {
@@ -16,7 +17,10 @@ namespace SingletonDesignPattern
         }
         public static Dataservice GetInstance()
         {
-            if(bucket==null) bucket = new Dataservice();
+            lock (contextLock)
+            {
+                if (bucket == null) bucket = new Dataservice();
+            }
             return bucket;
         }
     }
