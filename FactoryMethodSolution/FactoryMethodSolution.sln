@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodLib", "FactoryMethodLib\FactoryMethodLib.csproj", "{527BBAFC-79BC-49B4-8A92-17643F08AC8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodClientApp", "FactoryMethodClientApp\FactoryMethodClientApp.csproj", "{EAC636CB-F26B-434E-B9A0-2F8B30DE1700}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{527BBAFC-79BC-49B4-8A92-17643F08AC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527BBAFC-79BC-49B4-8A92-17643F08AC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527BBAFC-79BC-49B4-8A92-17643F08AC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527BBAFC-79BC-49B4-8A92-17643F08AC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAC636CB-F26B-434E-B9A0-2F8B30DE1700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAC636CB-F26B-434E-B9A0-2F8B30DE1700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAC636CB-F26B-434E-B9A0-2F8B30DE1700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAC636CB-F26B-434E-B9A0-2F8B30DE1700}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD65025C-9411-4CC5-9438-8CB146D03FB0}
+	EndGlobalSection
+EndGlobal
