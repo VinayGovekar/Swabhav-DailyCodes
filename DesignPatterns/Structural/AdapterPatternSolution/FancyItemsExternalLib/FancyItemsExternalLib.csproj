@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{797526FE-FADC-46B0-A8F7-89965E0BFCAE}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>NotifierDecoratorApp</RootNamespace>
-    <AssemblyName>NotifierDecoratorApp</AssemblyName>
+    <ProjectGuid>{9A25962B-D33F-4A97-B331-B716A8BF6E06}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FancyItemsExternalLib</RootNamespace>
+    <AssemblyName>FancyItemsExternalLib</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,18 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Decorator\FacebookNotifier.cs" />
-    <Compile Include="Model\Decorator\SlackNotifier.cs" />
-    <Compile Include="Model\Decorator\SmsNotifier.cs" />
-    <Compile Include="Model\Decorator\WhatsappNotifier.cs" />
-    <Compile Include="Model\Notifier.cs" />
-    <Compile Include="Model\StandardNotifier.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Hat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

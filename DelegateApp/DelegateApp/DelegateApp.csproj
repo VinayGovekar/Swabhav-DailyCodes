@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{797526FE-FADC-46B0-A8F7-89965E0BFCAE}</ProjectGuid>
+    <ProjectGuid>{19DCA7C1-D026-4C26-94C3-D834025730A9}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>NotifierDecoratorApp</RootNamespace>
-    <AssemblyName>NotifierDecoratorApp</AssemblyName>
+    <RootNamespace>DelegateApp</RootNamespace>
+    <AssemblyName>DelegateApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,18 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Decorator\FacebookNotifier.cs" />
-    <Compile Include="Model\Decorator\SlackNotifier.cs" />
-    <Compile Include="Model\Decorator\SmsNotifier.cs" />
-    <Compile Include="Model\Decorator\WhatsappNotifier.cs" />
-    <Compile Include="Model\Notifier.cs" />
-    <Compile Include="Model\StandardNotifier.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

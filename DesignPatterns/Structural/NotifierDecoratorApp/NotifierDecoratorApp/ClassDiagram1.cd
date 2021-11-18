@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NotifierDecoratorApp.Model.Decorator.FacebookNotifier">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Decorator\FacebookNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Model.Decorator.SlackNotifier">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Decorator\SlackNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Model.Decorator.SmsNotifier">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Decorator\SmsNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Model.Decorator.WhatsappNotifier">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Decorator\WhatsappNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Model.Notifier" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Notifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Model.StandardNotifier">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\StandardNotifier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NotifierDecoratorApp.Program">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
