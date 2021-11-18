@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotifierDecoratorApp", "NotifierDecoratorApp\NotifierDecoratorApp.csproj", "{797526FE-FADC-46B0-A8F7-89965E0BFCAE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{797526FE-FADC-46B0-A8F7-89965E0BFCAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{797526FE-FADC-46B0-A8F7-89965E0BFCAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{797526FE-FADC-46B0-A8F7-89965E0BFCAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{797526FE-FADC-46B0-A8F7-89965E0BFCAE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0CF445A-D12A-4A93-A0AE-A52CFC657948}
+	EndGlobalSection
+EndGlobal
