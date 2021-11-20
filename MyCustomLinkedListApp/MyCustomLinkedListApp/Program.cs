@@ -10,28 +10,23 @@ namespace MyCustomLinkedListApp
         {
             //LinkedList Created
             var myLL = new MyCustomLinkedList<int>();
-            
-            //Creating nodes
-            var node1 = new Node<int>();
-            node1.Data = 101;
-            var node2 = new Node<int>();
-            node2.Data = 102;
-            var node3 = new Node<int>();
-            node3.Data = 103;
-            
-            //Adding Nodes
-            myLL.Add(node1);
-            myLL.Add(node2);
-            myLL.Add(node3);
+     
+            //Adding items to linkedlist
+            myLL.Add(101);
+            myLL.Add(102);
+            myLL.Add(103);
+            myLL.Add(104);
+            myLL.Add(105);
 
-            //Displaying count and nodes
+            //Displaying count and items
             myLL.Display();
             Console.WriteLine("\nCount: {0}\n", myLL.Count());
             
-            //Removing node and displaying
-            myLL.Remove(node2);
+            //Removing item and displaying
+            myLL.Remove(103);
             myLL.Display();
             Console.WriteLine("\nCount: {0}",myLL.Count());
+            
             Console.ReadKey();
         }
     }

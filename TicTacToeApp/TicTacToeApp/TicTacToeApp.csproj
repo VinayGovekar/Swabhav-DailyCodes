@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}</ProjectGuid>
+    <ProjectGuid>{BD192730-1FEB-4D6F-BFF1-AB806A4D53D3}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyCustomLinkedListApp</RootNamespace>
-    <AssemblyName>MyCustomLinkedListApp</AssemblyName>
+    <RootNamespace>TicTacToeApp</RootNamespace>
+    <AssemblyName>TicTacToeApp</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyCustomLinkedList.cs" />
-    <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

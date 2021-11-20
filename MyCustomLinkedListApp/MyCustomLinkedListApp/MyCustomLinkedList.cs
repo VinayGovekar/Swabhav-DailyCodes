@@ -14,37 +14,45 @@ namespace MyCustomLinkedListApp
             _lastNode = null;
         }
 
-        public void Add(Node<T> node)
+        public void Add(T data)
         {
-            if (_startNode == null) _startNode =node;
-            else if (_startNode == _lastNode) _startNode.Next =node;
-            else _lastNode.Next = node;
-            _lastNode = node;
+            var newNode = new Node<T>();
+            newNode.Data = data;
+            if (_startNode == null) {
+                _startNode = newNode; 
+            }
+            else _lastNode.Next = newNode;
+            _lastNode = newNode;
         }
-        public void Remove(Node<T> node)
+        public void Remove(T data)
         {
-            Node<T> testNode = _startNode;
-            var nextNode = _startNode.Next;
-            while (testNode!=null)
+            Node<T> currentNode = _startNode;
+            Node<T> prevNode =null;
+            while (currentNode!=null)
             {
-                if (node == testNode && node == _startNode) {
+                if (data.Equals(_startNode.Data)) {
                     _startNode = _startNode.Next;
                     break;
                 }
-                else if (nextNode == _lastNode)
+                else if (currentNode.Data.Equals(data))
                 {
-                    _lastNode = testNode;
+                    RemoveCurrentNode(currentNode, prevNode);
                     break;
                 }
-                else if (nextNode == node)
-                {
-                    testNode.Next = nextNode.Next;
-                    break;
-                }
-                testNode = testNode.Next;
+                prevNode = currentNode;
+                currentNode = currentNode.Next;
             }
         }
 
+        private void RemoveCurrentNode(Node<T> currentNode,Node<T> prevNode)
+        {
+            if (currentNode == _lastNode)
+            {
+                prevNode.Next = null;
+                _lastNode = prevNode;
+            }
+            else prevNode.Next = currentNode.Next;
+        }
         public int Count()
         {
             int count = 0;
