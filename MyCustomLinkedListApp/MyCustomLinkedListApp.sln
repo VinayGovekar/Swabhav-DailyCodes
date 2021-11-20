@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCustomLinkedListApp", "MyCustomLinkedListApp\MyCustomLinkedListApp.csproj", "{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D9CD51-196B-4B24-A1A6-A5A0BCA8FB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {79EBF9A6-5A2A-4C5A-97F3-2C695C48AAEE}
+	EndGlobalSection
+EndGlobal
