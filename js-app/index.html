@@ -7,10 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="banner"></div>
+    <div id="banner">
+    </div>
+    <div id="refLinks">
+        <a href="greet.html">1. greet</a><br>
+        <a href="variables.html">2. variables.html</a><br>
+    </div>
 </body>
 <script>
-    var banner = document.querySelector("#banner");
-    banner.innerText = "<h1>Welcome to the world of JS and DOM</h1>";
+    var banner = document.querySelector("#banner")
+    banner.innerHTML = "<h3>Welcome to world of JS and DOM</h3>";
 </script>
 </html>
