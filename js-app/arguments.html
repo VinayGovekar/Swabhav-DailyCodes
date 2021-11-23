@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Everything in console
+</body>
+<script>
+    function f1(){
+        console.log(arguments.length)
+        for (let i = 0; i < arguments.length; i++) 
+        {
+           if(typeof arguments[i]=== 'function'){
+               arguments[i]();
+           } 
+           else{
+               console.log(arguments[i]);
+           }
+        }
+    }
+    f1();
+    f1(10,20,30);
+    f1(1,2,3,4,{"key":100});
+    f1(10,20,doSomething);
+
+    function doSomething(){
+        console.log("Do something");
+    }
+    
+</script>
+</html>

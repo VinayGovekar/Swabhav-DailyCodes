@@ -25,6 +25,10 @@ namespace TicTacToeCore
         {
             _boardCells[location].MarkCell(mark);
         }
+        public MarkType GetMark(int location)
+        {
+            return _boardCells[location].Mark;
+        }
         public Cell[] BoardCells{ get { return _boardCells; } }
     }
 }

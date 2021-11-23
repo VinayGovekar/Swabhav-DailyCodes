@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Click me</button>
+</body>
+<script>
+    /*
+    class publisher{
+        constructor(){
+            this._state=0;
+            this.subscriber=[];
+        }
+        AddSubs(sub){
+            this.subscriber.push(sub);
+        }
+        Display(){
+            var current=this.subscriber[this._state];
+            current.Display();
+            this._state++;
+            if(this._state>=this.subscriber.length){
+                _state=0;
+            }
+        }
+    }
+    class GodListner{
+        Display(){
+            console.log("God is listening");
+        }
+    }
+    class DevilListner{
+        Display(){
+            console.log("Devil is listening");
+        }
+    }
+    let pub = new publisher();
+    pub.AddSubs(new GodListner())
+    pub.AddSubs(new DevilListner()) 
+    */
+    var button = document.querySelector("button");
+    
+    
+    function GodListner(){
+        console.log("God is listening");
+    }
+    function DevilListner(){
+        console.log("Devil is listening")
+    }
+
+    button.addEventListener("click",GodListner);
+    button.addEventListener("click",DevilListner);
+</script>
+</html>

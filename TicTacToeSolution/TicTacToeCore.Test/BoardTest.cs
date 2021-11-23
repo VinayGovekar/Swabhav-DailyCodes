@@ -27,7 +27,7 @@ namespace TicTacToeCore.Test
             var board = new Board();
             int location = 0;
             board.MarkCellAtLocation(location, MarkType.X);
-            Assert.AreEqual(MarkType.X, board.BoardCells[location].Mark);
+            Assert.AreEqual(MarkType.X, board.GetMark(location));
         }
 
         [TestMethod]
