@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="idselector"></p>
+    <div class="classselector"></div>
+    <p class="classAndElement"></p>
+    <p class="multiple class"></p>
+</body>
+<script>
+    var h1tag = document.querySelector("h1");
+    h1tag.innerHTML = "Added using element selector";
+
+    var idSelect = document.querySelector("#idselector");
+    idSelect.innerHTML = "Added using id selector";
+
+    var classselect = document.querySelector(".classselector");
+    classselect.innerHTML = "Added using class selector";
+
+    var elementAndClass = document.querySelector("p.classAndElement");
+    elementAndClass.innerHTML = "Added using element class selector";
+
+    var multiple = document.querySelector("p.multiple");
+    multiple.innerHTML = "Added using multiple";
+    var multipleclass = document.querySelector("p.class");
+    multipleclass.innerHTML = multipleclass.innerHTML+" Added using class";
+
+</script>
+</html>

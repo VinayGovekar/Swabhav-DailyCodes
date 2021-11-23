@@ -14,6 +14,17 @@ namespace TicTacToeCore
             foreach (var cell in _boardCells) if (cell.Mark == MarkType.EMPTY) return false;
             return true;
         }
+
+        public bool CheckBoardEmpty()
+        {
+            foreach (var cell in _boardCells) if (cell.Mark != MarkType.EMPTY) return false;
+            return true;
+        }
+
+        public void MarkCellAtLocation(int location, MarkType mark)
+        {
+            _boardCells[location].MarkCell(mark);
+        }
         public Cell[] BoardCells{ get { return _boardCells; } }
     }
 }

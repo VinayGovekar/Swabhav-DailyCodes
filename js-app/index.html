@@ -5,14 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            font-family: Georgia, serif;
+        }
+        .codes-container 
+        {
+            display: inline-flex;
+            flex-wrap: wrap;
+        }
+
+        .codes-child 
+        {
+            display: inline;
+            flex: 1;
+            width: 200px;
+            line-height: 1.5;
+        }     
+
+        .codes-child:first-child {
+             margin-right: 20px;
+        } 
+        .classwork{
+            border-right: 2px solid black;
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        h4{
+            text-align: center;
+            margin-left: -30px;
+        }
+    </style>
 </head>
 <body>
-    <div id="banner">
-    </div>
-    <div id="refLinks">
-        <a href="greet.html">1. greet</a><br>
-        <a href="variables.html">2. variables.html</a><br>
-    </div>
+    <div id="banner"></div>
+    <div class="codes-container">
+        
+        <div class="codes-child classwork">
+            <h4>Classworks:</h4><br>
+            <a href="greet.html">1. greet.html</a><br>
+            <a href="variables.html">2. variables.html</a><br><br>
+        </div>
+        
+        <div class="codes-child assignments">
+            <h4>Assignments:</h4><br>
+            <a href="htmlselectors.html">1. htmlselectors.html</a><br>
+        </div>
+        
+      </div>
 </body>
 <script>
     var banner = document.querySelector("#banner")
