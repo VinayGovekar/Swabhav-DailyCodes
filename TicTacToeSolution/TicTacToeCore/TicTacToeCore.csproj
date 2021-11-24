@@ -45,6 +45,8 @@
     <Compile Include="Cell.cs" />
     <Compile Include="MarkType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultAnalyzer.cs" />
+    <Compile Include="ResultType.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
