@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    f1();
+    function f1(){
+        'use strict'
+        console.log("Inside function f1");//Uncaught ReferenceError: counter is not defined at f1 (hoisting.html:17) at hoisting.html:13
+        for(var counter=0;counter<5;counter++){
+            console.log("Counter value: "+counter);
+        }
+        console.log("Outside For counter: "+counter)
+    }
+    //console.log("Outside F1 counter: "+counter); //Uncaught ReferenceError: counter is not defined at hoisting.html:22 
+    //f2(); //hoisting.html:24 Uncaught TypeError: f2 is not a function at hoisting.html:24
+    
+    var f2 = function(){
+        console.log("Inside function expression");
+    }
+
+    f2();
+</script>
+</html>

@@ -23,41 +23,39 @@ namespace TicTacToeCore
         }
         private ResultType CheckRow()
         {
-            if (_board.BoardCells[0].Mark == _board.BoardCells[1].Mark &&
-                _board.BoardCells[1].Mark == _board.BoardCells[2].Mark) return ResultType.WIN;
+            if (CompareBoardCells(0,1,2)) return ResultType.WIN;
 
-            else if (_board.BoardCells[3].Mark == _board.BoardCells[4].Mark &&
-                _board.BoardCells[4].Mark == _board.BoardCells[5].Mark) return ResultType.WIN;
+            else if (CompareBoardCells(3,4,5)) return ResultType.WIN;
 
-            else if (_board.BoardCells[6].Mark == _board.BoardCells[7].Mark &&
-                _board.BoardCells[7].Mark == _board.BoardCells[8].Mark) return ResultType.WIN;
+            else if (CompareBoardCells(6,7,8)) return ResultType.WIN;
 
             return ResultType.NORESULT;
         }
 
         private ResultType CheckColumn()
         {
-            if (_board.BoardCells[0].Mark == _board.BoardCells[3].Mark &&
-                _board.BoardCells[3].Mark == _board.BoardCells[6].Mark) return ResultType.WIN;
+            if (CompareBoardCells(0,3,6)) return ResultType.WIN;
 
-            else if (_board.BoardCells[1].Mark == _board.BoardCells[4].Mark &&
-                _board.BoardCells[4].Mark == _board.BoardCells[7].Mark) return ResultType.WIN;
+            else if (CompareBoardCells(1,4,7)) return ResultType.WIN;
 
-            else if (_board.BoardCells[2].Mark == _board.BoardCells[5].Mark &&
-                _board.BoardCells[5].Mark == _board.BoardCells[8].Mark) return ResultType.WIN;
+            else if (CompareBoardCells(2,5,8)) return ResultType.WIN;
 
             return ResultType.NORESULT;
         }
 
         private ResultType CheckDiagonal()
         {
-            if (_board.BoardCells[0].Mark == _board.BoardCells[4].Mark &&
-                _board.BoardCells[4].Mark == _board.BoardCells[8].Mark) return ResultType.WIN;
+            if (CompareBoardCells(0,4,8)) return ResultType.WIN;
 
-            else if (_board.BoardCells[2].Mark == _board.BoardCells[4].Mark &&
-                _board.BoardCells[4].Mark == _board.BoardCells[6].Mark) return ResultType.WIN;
+            else if (CompareBoardCells(2,4,6)) return ResultType.WIN;
 
             return ResultType.NORESULT;
+        }
+        private bool CompareBoardCells(int i,int j,int k)
+        {
+            if (_board.BoardCells[i].Mark == _board.BoardCells[j].Mark &&
+                _board.BoardCells[j].Mark == _board.BoardCells[k].Mark) return true;
+            return false;
         }
         
     }

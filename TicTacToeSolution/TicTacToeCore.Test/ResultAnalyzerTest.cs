@@ -13,6 +13,7 @@ namespace TicTacToeCore.Test
             board.MarkCellAtLocation(0,MarkType.X);
             board.MarkCellAtLocation(1, MarkType.X);
             board.MarkCellAtLocation(2, MarkType.X);
+            /* X X X */
             ResultAnalyzer result = new ResultAnalyzer(board);
             Assert.AreEqual(ResultType.WIN, result.Analyze());
         }
@@ -23,6 +24,9 @@ namespace TicTacToeCore.Test
             board.MarkCellAtLocation(0, MarkType.X);
             board.MarkCellAtLocation(3, MarkType.X);
             board.MarkCellAtLocation(6, MarkType.X);
+            /* X
+             * X
+             * X */
             ResultAnalyzer result = new ResultAnalyzer(board);
             Assert.AreEqual(ResultType.WIN, result.Analyze());
         }
@@ -33,6 +37,9 @@ namespace TicTacToeCore.Test
             board.MarkCellAtLocation(2, MarkType.X);
             board.MarkCellAtLocation(4, MarkType.X);
             board.MarkCellAtLocation(6, MarkType.X);
+            /*X
+             *  X
+             *    X */
             ResultAnalyzer result = new ResultAnalyzer(board);
             Assert.AreEqual(ResultType.WIN, result.Analyze());
         }
@@ -49,6 +56,9 @@ namespace TicTacToeCore.Test
             board.MarkCellAtLocation(2, MarkType.X);
             board.MarkCellAtLocation(5, MarkType.O);
             board.MarkCellAtLocation(8, MarkType.X);
+            /* X O X
+             * X O O
+             * O X X */
             ResultAnalyzer result = new ResultAnalyzer(board);
             Assert.AreEqual(ResultType.DRAW, result.Analyze());
         }
@@ -65,7 +75,9 @@ namespace TicTacToeCore.Test
             board.MarkCellAtLocation(7, MarkType.X);
             board.MarkCellAtLocation(2, MarkType.X);
             board.MarkCellAtLocation(5, MarkType.O);
-            
+            /* X O X
+             * X O O
+             * O X   */
             ResultAnalyzer result = new ResultAnalyzer(board);
             Assert.AreEqual(ResultType.NORESULT, result.Analyze());
         }

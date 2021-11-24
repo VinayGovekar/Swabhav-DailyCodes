@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="colors" id="colors">
+        <option value="#ffffff">--select--</option>
+        <option value="#ff7a7a">Red</option>
+        <option value="#a1a7ff">Blue</option>
+        <option value="#a1ffb1">Green</option>
+      </select>
+</body>
+<script>
+    var selectTag = document.querySelector("#colors")
+    selectTag.addEventListener("change",changeColor);
+    function changeColor(){
+        var color = selectTag.value;
+        document.body.style.backgroundColor = color;
+    }
+    
+</script>
+   
+</html>

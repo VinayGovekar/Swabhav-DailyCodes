@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons/javascript.ico">
     <title>JS Codes</title>
     <style>
         *{
             font-family: Georgia, serif;
+        }/*
+        #mainContainer{
+            border-radius: 10px;
+            margin:auto;
+            border: 2px solid black;
+            width: 380px;
+            margin-top: 100px;
+        }*/
+        #mainContainer{
+            border-radius: 10px;
+
+            width: 380px;
+        }
+        #banner{
+            margin:auto;
+            text-align: center;
         }
         .codes-container 
         {
@@ -40,28 +57,37 @@
     </style>
 </head>
 <body>
-    <div id="banner"></div>
-    <div class="codes-container">
+    <div id="mainContainer">
+        <div id="banner"><h3>Welcome to world of JS and DOM</h3></div>
+        <div class="codes-container">
         
-        <div class="codes-child classwork">
-            <h4>Classworks:</h4><br>
-            <a href="greet.html">1. greet.html</a><br>
-            <a href="variables.html">2. variables.html</a><br>
-            <a href="event1.html">3. event1.html</a><br>
-            <a href="event2.html">4. event2.html</a><br>
-            <a href="arguments.html">5. arguments.html</a><br>
-            <a href="event3.html">6. event3.html</a><br>
-        </div>
-        
-        <div class="codes-child assignments">
-            <h4>Assignments:</h4><br>
-            <a href="htmlselectors.html">1. htmlselectors.html</a><br>
-        </div>
-        
-      </div>
+            <div class="codes-child classwork">
+                <h4>Classworks:</h4><br>
+                <ol>
+                    <li><a href="greet.html">greet.html</a></li>
+                    <li><a href="variables.html">variables.html</a></li>
+                    <li><a href="event1.html">event1.html</a></li>
+                    <li><a href="event2.html">event2.html</a></li>
+                    <li><a href="arguments.html">arguments.html</a></li>
+                    <li><a href="colorpicker.html">colorpicker.html</a></li>
+                    <li><a href="hoisting.html">hoisting.html</a></li>
+                    <li><a href="wrapper.html">wrapper.html</a></li>
+                </ol>
+            </div>
+            
+            <div class="codes-child assignments">
+                <h4>Assignments:</h4><br>
+                <ol>
+                    <li><a href="htmlselectors.html">htmlselectors.html</a></li>
+                    <li><a href="event3.html">event3.html</a></li>
+                    <li><a href="todov1">ToDoApp v1</a></li>
+                </ol>
+            </div>
+            
+          </div>
+    </div>
 </body>
 <script>
-    var banner = document.querySelector("#banner")
-    banner.innerHTML = "<h3>Welcome to world of JS and DOM</h3>";
+    
 </script>
 </html>
