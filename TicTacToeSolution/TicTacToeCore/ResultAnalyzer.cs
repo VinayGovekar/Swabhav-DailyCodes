@@ -31,7 +31,6 @@ namespace TicTacToeCore
 
             return ResultType.NORESULT;
         }
-
         private ResultType CheckColumn()
         {
             if (CompareBoardCells(0,3,6)) return ResultType.WIN;
@@ -54,7 +53,7 @@ namespace TicTacToeCore
         private bool CompareBoardCells(int i,int j,int k)
         {
             if (_board.BoardCells[i].Mark == _board.BoardCells[j].Mark &&
-                _board.BoardCells[j].Mark == _board.BoardCells[k].Mark) return true;
+                _board.BoardCells[j].Mark == _board.BoardCells[k].Mark && _board.BoardCells[i].Mark!=MarkType.EMPTY) return true;
             return false;
         }
         

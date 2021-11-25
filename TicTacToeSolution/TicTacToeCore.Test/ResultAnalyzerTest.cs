@@ -18,6 +18,14 @@ namespace TicTacToeCore.Test
             Assert.AreEqual(ResultType.WIN, result.Analyze());
         }
         [TestMethod]
+        public void TestNoResultFirst()
+        {
+            var board = new Board();
+            board.MarkCellAtLocation(0, MarkType.X);
+            ResultAnalyzer result = new ResultAnalyzer(board);
+            Assert.AreEqual(ResultType.NORESULT, result.Analyze());
+        }
+        [TestMethod]
         public void TestColumnWin()
         {
             var board = new Board();
