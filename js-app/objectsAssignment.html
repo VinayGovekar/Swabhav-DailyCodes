@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="displayBox"></div>
+    
+</body>
+<script>
+    var students = [{
+        name:"Vinay",
+        cgpa:8,
+        location:"Mumbai"
+    },
+    {
+        name:"Max",
+        cgpa:9,
+        location:"Delhi"
+    },
+    {
+        name:"Skye",
+        cgpa:6,
+        location:"Delhi"
+    },
+    {
+        name:"VinuGopalIyer",
+        cgpa:9.5,
+        location:"Goa"
+    },
+    {
+        name:"Kuma",
+        cgpa:7,
+        location:"Mumbai"
+    }]
+
+    localStorage["aurionpro.student"]=JSON.stringify(students);
+    var s2= JSON.parse(localStorage.getItem("aurionpro.student"));
+    var displayBox = document.querySelector(".displayBox");
+    displayData();
+    function displayData(){
+        var displayString="<table><tr><th>Name</th><th>CGPA</th><th>Location</th>";
+        function editString(str){
+            displayString=displayString+"<tr><td>"+str["name"]+"</td><td>"+str["cgpa"]+"</td><td>"
+                +str["location"]+"</td></tr>";
+        }
+        s2.forEach(n=>editString(n));
+        displayString = displayString+"</table>";
+        displayBox.innerHTML = displayString;
+        console.log(displayString);
+    } 
+</script>
+</html>

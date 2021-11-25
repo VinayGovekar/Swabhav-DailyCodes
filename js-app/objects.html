@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var students = [{
+        name:"Vinay",
+        cgpa:8,
+        location:"Mumbai"
+    },
+    {
+        name:"Max",
+        cgpa:9,
+        location:"Delhi"
+    },
+    {
+        name:"Skye",
+        cgpa:6,
+        location:"Delhi"
+    },
+    {
+        name:"VinuGopalIyer",
+        cgpa:9.5,
+        location:"Goa"
+    },
+    {
+        name:"Kuma",
+        cgpa:7,
+        location:"Mumbai"
+    }]
+
+    localStorage["aurionpro.student"]=JSON.stringify(students);
+    var s2= JSON.parse(localStorage.getItem("aurionpro.student"));
+    
+    function displayStudent(student){
+        console.log("Student: ")
+        console.log("Name : "+student["name"]);
+        console.log("Cgpa : "+student["cgpa"]);
+        console.log("Location : "+student["location"]);
+    }
+    console.log("All Students");
+    s2.forEach(displayStudent);
+
+    console.log("Mumbai Students");
+    s2.filter(n=> n["location"]=="Mumbai")
+    .forEach(displayStudent);
+
+    console.log("CGPA > 7");
+    s2.filter(n=> n["cgpa"]>7)
+    .forEach(displayStudent);
+
+    console.log("Long Name ");
+    s2.filter(n=> n["name"].length>7)
+    .forEach(displayStudent);
+</script>
+</html>

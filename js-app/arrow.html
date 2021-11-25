@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Arrow function</h3>
+</body>
+<script>
+    var nos = [10,20,30,40,50];
+    
+    nos.forEach(n=>console.log(n));
+    
+    console.log("After filter")
+    nos.filter(n=>n>25)
+    .forEach(n=>console.log(n));
+
+    console.log("String to int");
+    var newNos = ["10","20","30","40","50"];
+
+    newNos.map(n=>parseInt(n))
+    .filter(n=>n>25)
+    .forEach(n=>console.log(n));
+
+</script>
+</html>
