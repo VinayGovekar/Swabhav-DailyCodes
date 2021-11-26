@@ -76,6 +76,8 @@
                     <li><a href="funcprogramming.html">funcprogramming.html</a></li>
                     <li><a href="arrow.html">arrow.html</a></li>
                     <li><a href="objects.html">objects.html</a></li>
+                    <li><a href="event_loop.html">event_loop.html</a></li>
+                    <li><a href="login.html">login.html</a></li>
                 </ol>
             </div>
             
@@ -94,32 +96,6 @@
     </div>
 </body>
 <script>
-     var addButton = document.querySelector("#addButton");
-    console.log(addButton);
-    localStorage.setItem("items",[{
-        name:"abc"
-    }]);
-    var toDoItems=JSON.parse(localStorage.getItem("items"));
-    var displayBox = document.querySelector(".displayBox");
-    function addItems()
-    {
-        var itemName = document.querySelector(".itemName");
-        console.log(toDoItems);
-        toDoItems.push({
-            name:itemName.value
-        });
-        var displayString= "<ol>";
-        for(let i=1;i<toDoItems.length;i++){
-            displayString=displayString+"<li>"+toDoItems[i]["name"]+"</li>";
-        }
-        displayString +="</ol>";
-        displayBox.innerHTML = displayString;
-        localStorage.setItem("items",toDoItems);
-        console.log(typeof toDoItems);
-        console.log(toDoItems);
-        
-    }
     
-    addButton.addEventListener("click",addItems);
 </script>
 </html>

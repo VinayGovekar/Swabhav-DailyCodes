@@ -46,11 +46,12 @@
         gender:"Male"
     }]
     var radioInput = document.querySelectorAll("input[type=radio][name=gender]");
-    console.log(radioInput);
-    radioInput.forEach(addEffect)
+    radioInput.forEach(addEffect);
+
     function addEffect(rad){
         rad.addEventListener("change",changeData);     
     }
+    
     function changeData(){
         localStorage["aurionpro.student"]=JSON.stringify(students);
         var s2= JSON.parse(localStorage.getItem("aurionpro.student"));

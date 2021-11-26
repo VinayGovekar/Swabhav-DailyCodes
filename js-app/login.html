@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .userstar, .passstar{
+            color: red;
+        }
+      </style>
+</head>
+<body>
+    <form method="post" id="form" onsubmit="return validateForm()"> <br>
+        <label for="UserName">UserName :</label><br>
+        <input type="text" name="userName" id="userName" class="required"><span class="userstar"></span>
+        <br><br>
+        <label for="Password">Password  :</label><br>
+        <input type="password" name="userPassword" id="userPassword" class="required"><span class="passstar"></span>
+        <br><br>
+        <input type="submit" id="submitButton">
+    </form>
+</body>
+<script>
+    var form = document.querySelector("#form");
+    form.action="";
+    function validateForm(){
+        var username = document.querySelector("#userName");
+        var password = document.querySelector("#userPassword");
+        
+        if(username.value===""){
+            alert("Username cannot be empty");
+            document.querySelector(".userstar").innerHTML = " *";
+            return false;
+        }
+        else if(password.value===""){
+            alert("Password cannot be empty");
+            document.querySelector(".passstar").innerHTML = " *";
+            return false;
+        }
+        else{
+            form.action = "auth.asp";
+            return true;
+        }
+    }
+    
+</script>
+</html>
