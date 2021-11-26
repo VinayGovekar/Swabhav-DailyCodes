@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <script src="js/toDo.js"></script>
     <style> 
     *{
             font-family: Georgia, serif;
@@ -15,7 +14,7 @@
         margin: auto;
         border: 2px solid black;
         border-radius: 10px;;
-        width: 400px;
+        width: 500px;
         height: 400px;
     }
     .header{
@@ -42,9 +41,48 @@
         </div>
         <span class="addItem">Item Name: <input type="text" class="itemName"></span>
         <button id="addButton">Add</button>
+        <button id="clearButton">Clear</button>
         <div class="displayBox">
         </div>
     </div>
 </body>
-
+<script>
+    var addButton = document.querySelector("#addButton");
+    var toDoItems=JSON.parse(localStorage.getItem("items"));
+    console.log(typeof toDoItems);
+    var displayBox = document.querySelector(".displayBox");
+    console.log(localStorage.getItem("inner"));
+    if(localStorage.getItem("inner")!==null){
+        displayBox.innerHTML=localStorage.getItem("inner");
+    }
+    var clearButton =document.querySelector("#clearButton");
+    
+    function clear(){
+        console.log("clickedme");
+        localStorage.setItem("items",JSON.stringify([]));
+        localStorage.setItem("inner","");
+        displayBox.innerHTML="";
+    }
+    function addItems()
+    {
+        var itemName = document.querySelector(".itemName");
+        if(toDoItems==null){
+            toDoItems=[];
+        }
+        toDoItems.push({
+            name:itemName.value
+        });
+        var displayString= "<ol>";
+        for(let i=0;i<toDoItems.length;i++){
+            displayString=displayString+"<li>"+toDoItems[i]["name"]+"</li>";
+        }
+        displayString +="</ol>";
+        displayBox.innerHTML = displayString;
+        localStorage.setItem("inner",displayString);
+        localStorage.setItem("items",JSON.stringify(toDoItems));
+        
+    }
+    clearButton.addEventListener("click",clear);
+    addButton.addEventListener("click",addItems);
+</script>
 </html>

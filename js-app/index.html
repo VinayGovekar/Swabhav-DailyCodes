@@ -86,6 +86,7 @@
                     <li><a href="event3.html">event3.html</a></li>
                     <li><a href="todov1.html">ToDoApp v1</a></li>
                     <li><a href="objectsAssignment.html">objectsAssignment.html</a></li>
+                    <li><a href="gender.html">gender.html</a></li>
                 </ol>
             </div>
             
@@ -93,6 +94,32 @@
     </div>
 </body>
 <script>
+     var addButton = document.querySelector("#addButton");
+    console.log(addButton);
+    localStorage.setItem("items",[{
+        name:"abc"
+    }]);
+    var toDoItems=JSON.parse(localStorage.getItem("items"));
+    var displayBox = document.querySelector(".displayBox");
+    function addItems()
+    {
+        var itemName = document.querySelector(".itemName");
+        console.log(toDoItems);
+        toDoItems.push({
+            name:itemName.value
+        });
+        var displayString= "<ol>";
+        for(let i=1;i<toDoItems.length;i++){
+            displayString=displayString+"<li>"+toDoItems[i]["name"]+"</li>";
+        }
+        displayString +="</ol>";
+        displayBox.innerHTML = displayString;
+        localStorage.setItem("items",toDoItems);
+        console.log(typeof toDoItems);
+        console.log(toDoItems);
+        
+    }
     
+    addButton.addEventListener("click",addItems);
 </script>
 </html>

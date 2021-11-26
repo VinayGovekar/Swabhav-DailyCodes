@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="displayBox"></div>
+    <br>
+    <h4>Select Gender: </h4>
+    <input type="radio" id="genderMale" name="gender" value="Male">Male <br>
+    <input type="radio" id="genderFemale" name="gender" value="Female">Female <br>
+    <input type="radio" id="genderAll" name="gender" value="All">All<br>
+</body>
+<script>
+    var students = [{
+        name:"Vinay",
+        cgpa:8,
+        location:"Mumbai",
+        gender:"Male"
+    },
+    {
+        name:"Max",
+        cgpa:9,
+        location:"Delhi",
+        gender:"Male"
+    },
+    {
+        name:"Skye",
+        cgpa:6,
+        location:"Delhi",
+        gender:"Female"
+    },
+    {
+        name:"Selinar",
+        cgpa:9.5,
+        location:"Goa",
+        gender:"Female"
+    },
+    {
+        name:"Kuma",
+        cgpa:7,
+        location:"Mumbai",
+        gender:"Male"
+    }]
+    var radioInput = document.querySelectorAll("input[type=radio][name=gender]");
+    console.log(radioInput);
+    radioInput.forEach(addEffect)
+    function addEffect(rad){
+        rad.addEventListener("change",changeData);     
+    }
+    function changeData(){
+        localStorage["aurionpro.student"]=JSON.stringify(students);
+        var s2= JSON.parse(localStorage.getItem("aurionpro.student"));
+        var displayBox = document.querySelector(".displayBox");
+        displayData();
+        function displayData(){
+            var currentValue = document.querySelector('input[name="gender"]:checked').value
+            var displayString="<table><tr><th>Name</th><th>CGPA</th><th>Location</th><th>Gender</th></tr>";
+            function editString(str){
+                displayString=displayString+"<tr><td>"+str["name"]+"</td><td>"+str["cgpa"]+"</td><td>"
+                +str["location"]+"</td><td>"+str["gender"]+"</td></tr>";
+            }
+            s2.filter(n=>filterGender(n))
+            .forEach(n=>editString(n));
+            function filterGender(n){
+                if(currentValue=="All"){
+                    return true;
+                }
+                if(currentValue==n["gender"]){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+            displayString = displayString+"</table>";
+            displayBox.innerHTML = displayString;
+            console.log(displayString);
+        } 
+    }
+    
+</script>
+</html>
