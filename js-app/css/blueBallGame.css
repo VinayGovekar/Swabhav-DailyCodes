@@ -1,0 +1,54 @@
+*{
+    font-family: Georgia, serif;
+}
+body{
+    background-image: linear-gradient(240deg,#f7f7ad,#ffbc36);
+}
+.topHeader{
+    text-align: center;
+    margin-top: 20px;
+}
+h1 { 
+    color: black; 
+    font-family: 'Trocchi', serif; 
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px;  
+}
+.firstContainer{
+    margin: auto;
+    margin-top: 50px;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #adf7d3;
+    
+}
+.header{
+    text-align: center;
+    margin: auto;
+}
+.gameStart{
+    text-align: center;
+    margin-top: 25px;
+}
+.startButton{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.startButton:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}

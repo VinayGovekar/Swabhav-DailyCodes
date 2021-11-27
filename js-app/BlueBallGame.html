@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/blueBallGame.css">
+    <script src="js/BlueBallGame.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="topHeader"><h1>Blue Ball Game</h1></div>
+    <div class="firstContainer">
+        <div class="header"><h3>Rules</h3></div>
+        <div class="rulesList">
+            <ol>
+                <li>Player has to select the number of balls for which he wants to play the game.</li>
+                <li>A random blue ball will be present in the balls displayed when player clicks on start</li>
+                <li>If player selects the blue ball correctly, the game ends and player wins</li>
+                <li>If player selects a ball higher than blue ball, the selected ball will change color to red</li>
+                <li>If player selects a ball lower than blue ball, the selected ball will change color to green</li>
+                <li>If player fails to select the blue ball in 3attempts or within 60seconds, the game ends and player loses.</li>
+            </ol>
+        </div>
+        <div class="gameStart">
+            Value: <span class="value"></span>
+            <input type="range" name="inputRange" id="inputRange" min="1" max="100" value=1><br>
+            <button class="startButton">Start</button>
+        </div>
+    </div>
+    <div class="secondContainer"></div>
+</body>
+<script>
+    
+</script>
+</html>
