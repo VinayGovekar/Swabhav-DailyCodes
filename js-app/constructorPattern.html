@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Constructor Pattern </h2>
+</body>
+<script>
+    function Customer(id,name){
+        console.log(typeof this)
+        console.log(this);
+        this.id = "C"+id;
+        this.name = name.toUpperCase();;
+
+        this.GetDetails=function(){
+            return "Id: "+this.id +", Name: "+this.name;
+        }
+    }
+    var c1 = new Customer(101,"Vinay");
+    console.log(c1.GetDetails());
+
+    var c2 = new Customer(102,"Rahul");
+    console.log(c2.GetDetails());
+
+    c2.id=2001;
+    console.log(c2.GetDetails());
+    var c3 = Customer(103,"Sachin");
+    console.log(typeof c3);
+
+</script>
+</html>

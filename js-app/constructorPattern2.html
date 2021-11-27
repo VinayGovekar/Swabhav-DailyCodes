@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Constructor Pattern 2</h3>
+</body>
+<script>
+    function Customer(){
+        console.log(this);
+        var _name, _id;
+        this.setId = function(id){
+            if(id>0){
+                _id = "C"+id;
+            }
+        }
+        this.setName = function(name){
+            if(name.length>0){
+                _name=name;
+            }
+        }
+        this.getDetails=function(){
+            return "ID: "+_id+", Name: "+_name;
+        }
+    }
+
+    var c1 = new Customer();
+    c1.setId(101);
+    c1.setName("Vinay");
+    console.log(c1.getDetails());
+
+    var c2 = new Customer();
+    c2.setId(102);
+    c2.setName("Max");
+    console.log(c2.getDetails());
+
+    var c3 = Customer();
+    
+</script>
+</html>

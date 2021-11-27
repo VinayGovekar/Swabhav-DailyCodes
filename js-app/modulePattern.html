@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function makeStudent(){
+        var student={};
+        var _name,_rollNo;
+        student.setName = function(name){
+            if(name.length>0){
+                _name=name;
+            }
+        }
+        student.setRollNo = function(rollNo){
+            if(rollNo>0){
+                _rollNo=rollNo;
+            }
+        }
+
+        student.getDetails = function(){
+            return "Name : "+_name + " Rollno : "+_rollNo;
+        }
+        return student;
+    }
+
+    var s1 = makeStudent();
+    s1.setName("Vinay");
+    s1.setRollNo(10);
+    console.log(s1.getDetails());
+</script>
+</html>
