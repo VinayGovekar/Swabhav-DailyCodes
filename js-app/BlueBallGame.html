@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/blueBallGame.css">
-    <script src="js/BlueBallGame.js"></script>
+    <style>
+        *{
+    font-family: Georgia, serif;
+}
+body{
+    background-image: linear-gradient(240deg,#f7f7ad,#ffbc36);
+}
+.topHeader{
+    text-align: center;
+    margin-top: 20px;
+}
+h1 { 
+    color: black; 
+    font-family: 'Trocchi', serif; 
+    font-size: 45px; 
+    font-weight: normal; 
+    line-height: 48px;  
+}
+.firstContainer{
+    margin: auto;
+    margin-top: 50px;
+    border: solid 2px black;
+    border-radius: 10px;
+    width: 50%;
+    background-color: #adf7d3;
+    
+}
+.header{
+    text-align: center;
+    margin: auto;
+}
+.gameStart{
+    text-align: center;
+    margin-top: 25px;
+}
+.startButton{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.startButton:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.secondContainer{
+    margin: auto;
+    margin-top: 30px;
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 84%;
+    height: 370px;
+    background-color: #adf7d3;
+}
+.attempts{
+    margin-left: 107px;
+    margin-top: 40px;
+    font-size: 24px;
+}
+.timer{
+    margin-left: 660px;
+    margin-top: 30px;
+    font-size: 24px;
+}
+.resultText{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+.endGame{
+    margin-top: 10px;
+    margin-left: 560px;
+}
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -23,14 +106,138 @@
             </ol>
         </div>
         <div class="gameStart">
-            Value: <span class="value"></span>
+            Number of Balls: <span class="value"></span>
             <input type="range" name="inputRange" id="inputRange" min="1" max="100" value=1><br>
             <button class="startButton">Start</button>
         </div>
     </div>
     <div class="secondContainer"></div>
+    <span class="attempts"></span>
+    <span class="timer"></span>
+    <div class="resultText"></div>
+    <div class="endGame"></div>
 </body>
 <script>
-    
+    var ballCount=1;
+    var firstContainer = document.querySelector(".firstContainer");
+    var secondContainer = document.querySelector(".secondContainer");
+    var endGame = document.querySelector(".endGame");
+    var result = document.querySelector(".resultText");
+    secondContainer.style.display = "none";
+    var range =document.querySelector("#inputRange");
+    var value = document.querySelector(".value");
+    value.innerHTML="1";
+    range.addEventListener("input",changeValue)
+    function changeValue(){
+        value.innerHTML = range.value;
+    }
+    var startButton = document.querySelector(".startButton");
+    startButton.addEventListener("click",onStart);
+    var firstBox = document.querySelector(".firstContainer");
+    function onStart(){
+        var timer=60;
+        var timerText = document.querySelector(".timer");
+        var timerdisplay = setInterval(function(){
+            timerText.innerHTML="Time Remaining: "+timer;
+            timer=timer-1;
+        },1000);
+        var attempts = 5;
+        var attemptsText = document.querySelector(".attempts");
+        ballCount=value.innerHTML;
+        var blueNum = getRandomInt(1,ballCount);
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        console.log(blueNum);
+        firstContainer.style.display = "none";
+        secondContainer.style.display = "";
+        attemptsText.innerHTML = "Attempts Remaining: "+attempts;
+        for (let i = 1; i <= parseInt(ballCount); i++) {
+            var ballbutton = document.createElement('button');
+            ballbutton.type = 'button';
+            ballbutton.innerHTML = i;
+            ballbutton.className = 'ballButton';
+            ballbutton.style.backgroundColor="#d1cfcf";
+            ballbutton.style.color="black";
+            ballbutton.style.width = "40px";
+            ballbutton.style.height = "40px";
+            ballbutton.style.borderRadius = "50%";
+            ballbutton.style.margin = "10px";
+            ballbutton.addEventListener("click",checkWin);
+            
+            secondContainer.appendChild(ballbutton);
+        }
+        var timeChecker = setInterval(function(){
+            if(timer<0){
+                clearInterval(timerdisplay);
+                done();
+                clearInterval(timeChecker);
+                result.innerHTML = "Sorry time expired, you lose the game!";
+        }
+        },1000);
+        
+        function createEndButtons(){
+            var button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'endButton';
+            button.style.backgroundColor="##fffdd0";
+            button.style.border = "solid 2px black";
+            button.style.borderRadius = "25px";
+            button.style.color="black";
+            button.style.width = "100px";
+            button.style.height = "50px";
+            button.style.margin = "10px";
+            button.style.textAlign = "center";
+            button.style.fontSize="20px";
+            return button;
+        }
+        function done(){
+            var buttons = document.querySelectorAll(".ballButton");
+            buttons.forEach(function(n){
+                n.disabled = true;
+            })
+            var restartButton = createEndButtons();
+            restartButton.addEventListener("click",restartGame);
+            var exitButton=createEndButtons();
+            exitButton.addEventListener("click",closeGame);
+            restartButton.innerHTML ="Restart";
+            exitButton.innerHTML="Exit";
+            endGame.appendChild(restartButton);
+            endGame.appendChild(exitButton);
+            
+        }
+
+        function restartGame(){
+            location.reload();
+        }
+        function closeGame(){
+            window.open(window.location.href, '_self', '');
+            window.close();
+        }
+        function checkWin(){
+            
+            if(this.innerHTML==blueNum){
+                this.style.backgroundColor="blue";
+                result.innerHTML =  "Congrats you won the game in "+(5-(attempts-1))+" attempts";
+                done();
+                clearInterval(timerdisplay);
+            }
+            else if(this.innerHTML<blueNum){
+                this.style.backgroundColor="green";
+            }
+            else{
+                this.style.backgroundColor="red";
+            }
+            if(attempts<2 && this.innerHTML!=blueNum){
+                result.innerHTML = "Sorry no more attempts available";
+                done();
+                clearInterval(timerdisplay);
+            }
+            attempts=attempts-1;
+            attemptsText.innerHTML = "Attempts Remaining: "+attempts;
+        }
+    }
 </script>
 </html>
