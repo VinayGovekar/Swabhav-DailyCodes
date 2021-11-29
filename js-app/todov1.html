@@ -47,22 +47,39 @@
     </div>
 </body>
 <script>
+
+    function LocalStorage(){
+        this.storeString=function(adddisplayString){
+            localStorage.setItem("inner",adddisplayString);  
+        }
+        this.storeItems = function(items){
+            localStorage.setItem("items",JSON.stringify(items));
+        }
+        this.retriveString = function(){
+            return localStorage.getItem("inner");
+        }
+        this.retriveStringItems = function(){
+            return JSON.parse(localStorage.getItem("items"));
+        }
+    }
+
     var addButton = document.querySelector("#addButton");
-    var toDoItems=JSON.parse(localStorage.getItem("items"));
-    console.log(typeof toDoItems);
+    
+    var lStorage = new LocalStorage();
+    var toDoItems=lStorage.retriveStringItems();
+    
     var displayBox = document.querySelector(".displayBox");
-    console.log(localStorage.getItem("inner"));
-    if(localStorage.getItem("inner")!==null){
-        displayBox.innerHTML=localStorage.getItem("inner");
+    if(lStorage.retriveString()!==null){
+        displayBox.innerHTML=lStorage.retriveString();
     }
     var clearButton =document.querySelector("#clearButton");
     
     function clear(){
         console.log("clickedme");
-        localStorage.setItem("items",JSON.stringify([]));
-        localStorage.setItem("inner","");
-        displayBox.innerHTML="";
         toDoItems=[];
+        lStorage.storeString("");
+        lStorage.storeItems(toDoItems);
+        displayBox.innerHTML="";
     }
     function addItems()
     {
@@ -79,10 +96,10 @@
         }
         displayString +="</ol>";
         displayBox.innerHTML = displayString;
-        localStorage.setItem("inner",displayString);
-        localStorage.setItem("items",JSON.stringify(toDoItems));
-        
+        lStorage.storeItems(toDoItems);
+        lStorage.storeString(displayString);
     }
+    
     clearButton.addEventListener("click",clear);
     addButton.addEventListener("click",addItems);
 </script>

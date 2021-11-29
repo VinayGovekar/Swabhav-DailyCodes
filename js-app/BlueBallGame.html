@@ -219,16 +219,16 @@ h1 {
         function checkWin(){
             
             if(this.innerHTML==blueNum){
-                this.style.backgroundColor="blue";
+                this.style.backgroundColor="#3d96fc";
                 result.innerHTML =  "Congrats you won the game in "+(5-(attempts-1))+" attempts";
                 done();
                 clearInterval(timerdisplay);
             }
             else if(this.innerHTML<blueNum){
-                this.style.backgroundColor="green";
+                this.style.backgroundColor="#8bff59";
             }
             else{
-                this.style.backgroundColor="red";
+                this.style.backgroundColor="#fc3f35";
             }
             if(attempts<2 && this.innerHTML!=blueNum){
                 result.innerHTML = "Sorry no more attempts available";
