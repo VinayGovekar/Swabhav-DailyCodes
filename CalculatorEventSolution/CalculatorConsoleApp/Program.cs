@@ -8,9 +8,8 @@ namespace CalculatorConsoleApp
         static void Main(string[] args)
         {
             Calculator calci = new Calculator();
-            calci.OnAddOperationCompleted += PrintDetails;
+            calci.OperationCompleted += PrintDetails;
             calci.Add(10, 2);
-            calci.OnSubtractOperationCompleted += PrintDetails;
             calci.Substrct(5, 2);
 
             Console.ReadKey();
