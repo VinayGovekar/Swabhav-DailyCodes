@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <br>
+        <span class="numberLabel">Number: </span>   
+        <input type="text" name="numValue" id="numValue"><br><br>
+        <button class="searchButton">Search</button><br>
+        <div class="result"></div>
+    </div>
+</body>
+<script>
+    var url = "http://numbersapi.com/";
+    var value = document.querySelector("#numValue");
+    var result = document.querySelector(".result");
+    var searchButton = document.querySelector(".searchButton");
+    searchButton.addEventListener("click",onSearch);
+
+    function onSearch(){
+        url=url+value.value+"?json";
+        console.log(url);
+        result.innerHTML="";
+        if(value.value!=""){
+            fetch(url)
+            .then(response => response.json())
+            .then(data=>{
+                result.innerHTML="<br>"+data.text;
+            });
+            url="http://numbersapi.com/";
+        }
+        else{
+            result.innerHTML="<br>Please enter valid number!!!"
+        }
+    }
+</script>
+</html>

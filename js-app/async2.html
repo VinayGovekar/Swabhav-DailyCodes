@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async2</h1>
+</body>
+<script>
+    'use strict'
+    function doTask(no,fnSuccess,fnFailure){
+        var value = Math.random()*no;
+        if(value>5){
+            fnSuccess({msg:"success",data:value});
+            return 1;
+        }
+        fnFailure({msg:"Error value is less than expected",data:value});
+    }
+
+    doTask(10,function(result){
+        console.log("Success happened");
+        console.log(result);
+    },function(result){
+        console.log("Error happened");
+        console.log(result);
+    });
+    console.log("End of program");
+</script>
+</html>

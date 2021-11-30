@@ -15,7 +15,7 @@ namespace WindowsFormApp
         public WelcomeForm()
         {
             InitializeComponent();
-            this.Text = "Welcome Form";
+            this.Text = "Vinay";
             this.Shown += CreateLabel;
             this.Shown += CreateButton;
         }
@@ -45,8 +45,10 @@ namespace WindowsFormApp
             Button clickMeButton = new Button();
             clickMeButton.Text = "Click Me!";
             clickMeButton.Font = new Font("Arial", 14);
+
             clickMeButton.Click += new EventHandler(this.GodListner);
             clickMeButton.Click += new EventHandler(this.DevilListner);
+
             clickMeButton.Size = new Size(150,30);
             clickMeButton.Location= new Point(30,30);
             clickMeButton.BackColor = Color.LightBlue;

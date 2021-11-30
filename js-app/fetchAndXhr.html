@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <br>Number:
+        <input type="text" name="inputValue" class="inputValue"><br><br>
+        <span class="buttonsRow">
+            <button class="fetchButton">Fetch</button>
+            <button class="xhrButton">XHR</button>
+        </span><br>
+        <div class="resultDiv"></div>
+    </div>
+</body>
+<script src="DataService.js"></script>
+<script>
+
+    var input = document.querySelector(".inputValue");
+    
+    var fetchButton = document.querySelector(".fetchButton");
+    fetchButton.addEventListener("click",fetchEventHandler);
+
+    var xhrButton = document.querySelector(".xhrButton");
+    xhrButton.addEventListener("click",XHREventHandler);
+
+    function displayInDiv(result){
+        var resultDiv = document.querySelector(".resultDiv");
+        resultDiv.innerHTML = "<br>"+ result.text;
+    }
+
+    function fetchEventHandler(){
+        var promise =DataService.getViaFetch(input.value);
+        promise.then(data=>displayInDiv(data));
+        console.log("Inside Fetch Handler");
+    }
+
+    function XHREventHandler(){
+        DataService.getViaXHR(input.value,(result)=>displayInDiv(result));
+        console.log("Inside XHR Handler");
+    }
+
+    console.log("End of Main Script");
+</script>
+</html>

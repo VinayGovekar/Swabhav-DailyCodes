@@ -124,6 +124,7 @@ h1 {
     var endGame = document.querySelector(".endGame");
     var result = document.querySelector(".resultText");
     secondContainer.style.display = "none";
+
     var range =document.querySelector("#inputRange");
     var value = document.querySelector(".value");
     value.innerHTML="1";
@@ -144,6 +145,7 @@ h1 {
         var attempts = 5;
         var attemptsText = document.querySelector(".attempts");
         ballCount=value.innerHTML;
+
         var blueNum = getRandomInt(1,ballCount);
         function getRandomInt(min, max) {
             min = Math.ceil(min);

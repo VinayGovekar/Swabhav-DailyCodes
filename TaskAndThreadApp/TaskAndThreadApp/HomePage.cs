@@ -15,6 +15,7 @@ namespace TaskAndThreadApp
         public HomePage()
         {
             InitializeComponent();
+            
             this.Height = 200;
             this.Width = 300;
             this.Shown += AllButtonsCreater;

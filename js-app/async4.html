@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Async 4 using Promise</h1>
+</body>
+<script>
+     'use strict'
+    function doTask(no,fnSuccess,fnFailure){
+        return new Promise(function(fnResolve,fnReject){
+            console.log("Inside Promise");
+            var value = Math.random()*no;
+            console.log(value);
+            if(value>5){
+               fnResolve({msg:"Success",data:value})
+            }
+            else{
+                fnReject({msg:"Error happened"})
+            }
+        });
+    }
+    doTask(10)
+    .then((r)=>{
+        console.log(r);
+        return r.data;
+    })
+    .then((n)=>{
+        console.log("Inside 2nd Then");
+        console.log(n);
+    })
+    .catch((err)=> console.log("Error"+err.msg))
+        
+    console.log("End of program");
+</script>
+</html>
