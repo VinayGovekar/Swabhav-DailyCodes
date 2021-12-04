@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.6.0.js"></script>
+    <style>
+        .text{
+            margin-top: 1200px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="banner">
+        <br>
+        <div class="text"></div>
+    </div>
+</body>
+<script>
+    console.log(jQuery==$);
+    console.log(typeof jQuery);
+
+    $('.banner')
+    .css("background-color","#ff6a59")
+    .css("width","50%")
+    .css("height","200px")
+    .css("margin","auto")
+    .css("margin-top","120px")
+    .css("border-radius","25px");
+
+    $(".text").html("Welcome to the world of JQuery")
+    .css("font-size","12px")
+    .css("font-family"," sans serif")
+    .css("color","#ffffba")
+    .css("margin-top","50px")
+    .css("margin-left","100px")
+    .animate({fontSize: '35px'}, "slow");
+</script>
+</html>
