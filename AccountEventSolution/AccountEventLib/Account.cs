@@ -3,14 +3,14 @@
 
 namespace AccountEventLib
 {
-    public delegate void DonBalanceChanged(Account account);
+   // public delegate void DonBalanceChanged(Account account);
     public class Account
     {
         private string _name;
         private int _accountNumber;
         private double _balance;
         private double _withdraw;
-        public event DonBalanceChanged OnBalanceChanged = null;
+        public event Action<Account> OnBalanceChanged = null;
         public Account(string name, int accountNumber, double balance)
         {
             _name = name;
